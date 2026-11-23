@@ -1,0 +1,26 @@
+# Nenhum arquivo de ambiente entra no repositório, nem exemplos.
+.env*
+**/.env*
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+.local/
+tmp/
+output/
+coverage/
+playwright-report/
+test-results/
+*.log
+*.pem
+*.key
+*.pfx
+*.p12
+*.dump
+*.backup
+*.sql.gz
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
