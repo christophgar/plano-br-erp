@@ -9,8 +9,8 @@ O pacote contém o código-fonte e a estrutura completa do banco PostgreSQL. O b
 ### Primeira execução no Windows
 
 1. Instale Node.js 22.18 ou superior e PostgreSQL 18. É necessária internet para instalar as dependências. Git e Word não são necessários para executar o pacote extraído.
-2. Extraia **todo** o arquivo RAR. Não execute o projeto de dentro do WinRAR.
-3. Abra o PowerShell na pasta `Plano_BR` que contém este README e o arquivo `package.json`.
+2. No GitHub, clique em **Code → Download ZIP** e extraia todo o arquivo. Se recebeu a entrega em RAR, extraia todo o RAR. Não execute de dentro do compactador. Como alternativa, use `git clone https://github.com/christophgar/plano-br-erp.git`.
+3. Abra o PowerShell na pasta extraída ou clonada que contém este README e o arquivo `package.json` (`plano-br-erp-main`, `plano-br-erp` ou `Plano_BR`, conforme a forma de download).
 4. Execute os comandos abaixo, um de cada vez, aguardando cada um terminar:
 
 ```powershell
@@ -102,15 +102,15 @@ Com Docker funcionando: `npm ci`, `npm run setup`, `docker compose up -d db`, `n
 
 ## Funcionalidades e perfis
 
-- Clientes: PF/PJ, CPF/CNPJ com dígitos verificadores, regime tributário, inscrições opcionais, contatos e endereço completo. Administrador exporta vínculos e remove dados pessoais sem operações associadas. Cadastros antigos são preservados e podem ser completados na edição.
+- Clientes: PF/PJ, CPF/CNPJ com dígitos verificadores, regime tributário, inscrições opcionais, contatos e endereço completo. Cadastros antigos são preservados e podem ser completados na edição.
 - Produtos: catálogo e movimentações auditadas, com bloqueio transacional contra estoque negativo.
 - Pedidos: produtos do estoque, quantidades, preços históricos e total calculado no servidor. Salvar baixa o estoque; cancelar devolve os itens quando não houver financeiro ativo. O botão **Adicionar nota fiscal** usa a receita existente ou cria uma receita pendente, sem confirmar recebimento nem emitir nota.
 - Financeiro: receitas, despesas, vencimentos e baixa. Valores pagos não são reversíveis neste protótipo.
 - Fiscal: número, tipo, data e valor do documento, vínculo financeiro e conferência com motivo. Divergências impedem a conferência.
 - Painel mensal: receita bruta recebida, imposto estimado pela alíquota cadastrada, receita após impostos, despesas pagas, custos operacionais adicionais opcionais e resultado líquido estimado. Pedidos abertos e pendências documentais mostram a posição geral.
-- Administração: usuários, desativação de acesso e auditoria. Troca de senha na tela Privacidade encerra todas as sessões.
+- Administração: usuários, desativação de acesso e auditoria. Troca de senha na tela Configurações encerra todas as sessões.
 
-A auditoria identifica nome/e-mail do responsável, data e hora e ações em português; detalhes mantêm a identificação técnica do registro. A tela Privacidade contém a troca de senha, com confirmação e espaçamento entre campos e botão.
+A auditoria identifica nome/e-mail do responsável, data e hora e ações em português; detalhes mantêm a identificação técnica do registro. A tela Configurações contém a troca de senha, com confirmação e espaçamento entre campos e botão.
 
 | Perfil | Permissões |
 | --- | --- |
